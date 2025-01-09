@@ -10,7 +10,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/movies" Component={DefaultLayout} >
+        <Route path="/" Component={DefaultLayout} >
           <Route index Component={HomePage} />
           <Route path=":id" Component={Detail} />
         </Route>
