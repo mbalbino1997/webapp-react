@@ -3,6 +3,7 @@ import axios from "axios"
 import Card from "../components/card/Card";
 export default function HomePage() {
     const [movies, setMovies] = useState([])
+    const URI = "http://localhost:3000/"
     function fetchData() {
         axios.get("http://localhost:3000/movies")
             .then((res) => {
@@ -22,7 +23,7 @@ export default function HomePage() {
 
                     {movies.map((el, i) => (
                         <div className="col" key={i}>
-                            <Card title={el.title} abstract={el.abstract} ID={el.id} />
+                            <Card title={el.title} abstract={el.abstract} ID={el.id} image={el.image} URI={URI} />
                         </div>
                     ))}
                 </div>
