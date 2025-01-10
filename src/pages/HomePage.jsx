@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
+import Card from "../components/card/Card";
 export default function HomePage() {
     const [movies, setMovies] = useState([])
     function fetchData() {
@@ -15,12 +16,19 @@ export default function HomePage() {
         fetchData()
     }, [])
     return (
-        <><ul>
-            {movies.map((el, i) => (
-                <li key={i}>{el.title}</li>
-            ))}
+        <><section>
+            <div className="container">
+                <div className="row">
 
-        </ul>
+                    {movies.map((el, i) => (
+                        <div className="col" key={i}>
+                            <Card title={el.title} abstract={el.abstract} ID={el.id} />
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+        </section>
         </>
     )
 }
