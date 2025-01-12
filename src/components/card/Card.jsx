@@ -11,7 +11,7 @@ export default function ({ title, abstract, ID, image, URI }) {
                 <h3>{title}</h3>
                 <p>{abstract}</p>
                 <div className={style.lower_card}>
-                    <Link to={`/movies/${ID}`}>maggiori informazioni</Link>
+                    <Link to={`/${ID}`}>maggiori informazioni</Link>
 
                 </div>
             </div>
