@@ -23,7 +23,7 @@ export default function HomePage() {
 
                     {movies.map((el, i) => (
                         <div className="col" key={i}>
-                            <Card title={el.title} abstract={el.abstract} ID={el.id} image={el.image} URI={URI} />
+                            <Card title={el.title} abstract={el.abstract} ID={el.id} image={el.image} URI={URI} avg_vote={Math.round(el.avg_vote)} />
                         </div>
                     ))}
                 </div>
