@@ -8,7 +8,7 @@ import ReviewCard from "../components/reviewCard/ReviewCard";
 export default function Detail() {
     const { id } = useParams();
     const [movie, setMovie] = useState({ reviews: [] })
-    const { image, title, abstract, release_year, director } = movie;
+    const { image, title, abstract, release_year, director, avg_score } = movie;
     const URI = "http://localhost:3000/";
     function fetchData() {
         axios.get(`http://localhost:3000/movies/${id}`)
@@ -31,6 +31,7 @@ export default function Detail() {
             <div>
                 <h1>{title}</h1>
                 <p>{release_year}-{director}</p>
+                <h2>voto: {Math.round(avg_score)}/5</h2>
                 <h2>{abstract}</h2>
 
             </div>
