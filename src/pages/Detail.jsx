@@ -38,7 +38,11 @@ export default function Detail() {
         </div>
         <div className="container">
             <hr />
-            <button><Link to="/">back to movies</Link></button>
+            <div className="row row-review">
+                <h1>Tutte le recensioni:</h1>
+                <button className="btn"><Link to="/">back to movies</Link></button>
+
+            </div>
             {Array.isArray(movie.reviews) && movie.reviews.map((review, i) => (
 
                 <ReviewCard key={i} review={review} />
