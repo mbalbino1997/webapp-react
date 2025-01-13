@@ -3,16 +3,18 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import ReviewCard from "../components/reviewCard/ReviewCard";
 
 export default function Detail() {
     const { id } = useParams();
-    const [movie, setMovie] = useState({})
+    const [movie, setMovie] = useState({ reviews: [] })
     const { image, title, abstract, release_year, director } = movie;
     const URI = "http://localhost:3000/";
     function fetchData() {
         axios.get(`http://localhost:3000/movies/${id}`)
             .then((res) => {
                 setMovie(res.data)
+                console.log(movie.reviews)
 
             })
             .catch((err) => {
@@ -37,6 +39,11 @@ export default function Detail() {
         <div className="container">
             <hr />
             <button><Link to="/">back to movies</Link></button>
+            {Array.isArray(movie.reviews) && movie.reviews.map((review, i) => (
+
+                <ReviewCard key={i} review={review} />
+            )
+            )}
 
 
         </div>

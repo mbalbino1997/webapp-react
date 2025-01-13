@@ -1,7 +1,7 @@
 import style from "./Card.module.css"
 import { Link } from "react-router-dom";
 
-export default function ({ title, abstract, ID, image, URI }) {
+export default function Card({ title, abstract, ID, image, URI }) {
 
 
     return (
