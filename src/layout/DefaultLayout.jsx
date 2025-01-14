@@ -4,9 +4,11 @@ import Footer from "../components/Footer";
 
 export default function DefaultLayout() {
     return (
-        <div>
+        <div className="app_flex">
             <Header />
-            <Outlet />
+            <main>
+                <Outlet />
+            </main>
             <Footer />
         </div>
     );

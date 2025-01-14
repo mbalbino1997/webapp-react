@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import ReviewCard from "../components/reviewCard/ReviewCard";
 import GenerateStars from "../components/GenerateStars";
+import FormReview from "../components/form/FormReview";
 
 export default function Detail() {
     const { id } = useParams();
@@ -43,7 +44,7 @@ export default function Detail() {
         <div className="container">
             <hr className="hr" />
             <div className="row row-review">
-                <h1>Tutte le recensioni:</h1>
+                <h1>Reviews:</h1>
                 <button className="btn"><Link to="/">back to movies</Link></button>
 
             </div>
@@ -53,6 +54,7 @@ export default function Detail() {
                 <ReviewCard key={i} review={review} />
             )
             )}
+            <FormReview />
 
 
         </div>

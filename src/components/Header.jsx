@@ -5,6 +5,7 @@ export default function Header() {
         padding: "20px",
         textAlign: "center",
         fontFamily: "Arial, sans-serif",
+        marginBottom: "20px"
     };
 
     const titleStyle = {

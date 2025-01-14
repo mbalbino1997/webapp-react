@@ -17,7 +17,7 @@ export default function HomePage() {
         fetchData()
     }, [])
     return (
-        <><section>
+        <section>
             <div className="container">
                 <div className="row">
 
@@ -30,6 +30,5 @@ export default function HomePage() {
             </div>
 
         </section>
-        </>
     )
 }

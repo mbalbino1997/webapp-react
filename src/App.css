@@ -31,7 +31,6 @@ a {
 }
 
 section {
-    background-color: rgba(161, 28, 28, 0.897);
     padding: 50px 0;
 }
 
@@ -72,4 +71,32 @@ section {
 
 .star_gap {
     gap: 5px;
+}
+
+.app_flex {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.form_review {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.form_item {
+    display: flex;
+    flex-direction: column;
+}
+
+.text_center {
+    text-align: center;
 }

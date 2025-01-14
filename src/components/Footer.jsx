@@ -6,6 +6,7 @@ export default function Footer() {
         textAlign: "center",
         fontFamily: "Arial, sans-serif",
         fontSize: "0.9rem",
+        marginTop: "20px",
     };
 
     const linkStyle = {
@@ -22,11 +23,7 @@ export default function Footer() {
 
     return (
         <footer style={footerStyle}>
-            <div>
-                <a href="/about" style={linkStyle}>About</a>
-                <a href="/contact" style={linkStyle}>Contact</a>
-                <a href="/privacy" style={linkStyle}>Privacy Policy</a>
-            </div>
+
             <p style={copyrightStyle}>
                 © {new Date().getFullYear()} MovieReviews. All rights reserved.
             </p>
