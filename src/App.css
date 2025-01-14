@@ -36,6 +36,7 @@ section {
 }
 
 .btn {
+    text-wrap: nowrap;
     margin-top: 20px;
     display: inline-block;
     padding: 10px 20px;
@@ -63,4 +64,12 @@ section {
 .row-review {
     justify-content: space-between;
     align-items: baseline;
+}
+
+.hr {
+    margin: 10px 0;
+}
+
+.star_gap {
+    gap: 5px;
 }

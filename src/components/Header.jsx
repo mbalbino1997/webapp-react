@@ -1,7 +1,7 @@
 export default function Header() {
     const headerStyle = {
-        backgroundColor: "#2c3e50",
-        color: "#ecf0f1",
+        backgroundColor: "black",
+        color: "white",
         padding: "20px",
         textAlign: "center",
         fontFamily: "Arial, sans-serif",
@@ -16,7 +16,7 @@ export default function Header() {
         fontSize: "1.2rem",
         margin: "5px 0 0",
         fontStyle: "italic",
-        color: "#bdc3c7",
+        color: "white",
     };
 
     return (

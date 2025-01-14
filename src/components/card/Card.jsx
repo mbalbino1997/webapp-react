@@ -13,7 +13,7 @@ export default function Card({ title, abstract, ID, image, URI, avg_vote }) {
                 <div>{avg_vote !== null && avg_vote !== undefined ? <GenerateStars score={avg_vote} /> : ""}</div>
                 <p>{abstract}</p>
                 <div className={style.lower_card}>
-                    <Link to={`/${ID}`}>maggiori informazioni</Link>
+                    <Link className="btn" to={`/${ID}`}>maggiori informazioni</Link>
 
                 </div>
             </div>

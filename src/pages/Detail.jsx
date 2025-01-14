@@ -28,7 +28,9 @@ export default function Detail() {
     return (<>
 
         <div className={`container row ${style.div}`}>
+            <hr className="hr" />
             <figure className={style.figure}><img className={style.cover_img} src={image ? image.includes("https") ? image : `${URI}imgs/${image}` : null} alt="" /></figure>
+            <hr className="hr" />
             <div>
                 <h1>{title}</h1>
                 <p>{release_year}-{director}</p>
@@ -39,12 +41,13 @@ export default function Detail() {
 
         </div>
         <div className="container">
-            <hr />
+            <hr className="hr" />
             <div className="row row-review">
                 <h1>Tutte le recensioni:</h1>
                 <button className="btn"><Link to="/">back to movies</Link></button>
 
             </div>
+            <hr className="hr" />
             {Array.isArray(movie.reviews) && movie.reviews.map((review, i) => (
 
                 <ReviewCard key={i} review={review} />
