@@ -1,6 +1,6 @@
 export default function Header() {
     const headerStyle = {
-        backgroundColor: "black",
+        backgroundColor: "#69150ec7",
         color: "white",
         padding: "20px",
         textAlign: "center",
