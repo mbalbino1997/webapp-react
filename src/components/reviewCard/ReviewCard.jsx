@@ -1,9 +1,12 @@
-import style from "./ReviewCard.module.css"
+import style from "./ReviewCard.module.css";
+import GenerateStars from "../GenerateStars";
 export default function ReviewCard({ review }) {
     return (
         <div className={style.reviewCard}>
             <h2>{review.name}</h2>
-            <h2>{review.vote}</h2>
+            <div>
+                {review.vote !== null && review.vote !== undefined ? <GenerateStars score={review.vote} /> : ""}
+            </div>
             <p>{review.text}</p>
         </div>
     )
