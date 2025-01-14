@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import ReviewCard from "../components/reviewCard/ReviewCard";
+import GenerateStars from "../components/GenerateStars";
 
 export default function Detail() {
     const { id } = useParams();
@@ -31,7 +32,7 @@ export default function Detail() {
             <div>
                 <h1>{title}</h1>
                 <p>{release_year}-{director}</p>
-                <h2>voto: {Math.round(avg_score)}/5</h2>
+                <div>{avg_score !== null && avg_score !== undefined ? <GenerateStars score={avg_score} /> : ""}</div>
                 <h2>{abstract}</h2>
 
             </div>
@@ -52,6 +53,7 @@ export default function Detail() {
 
 
         </div>
+
     </>
     )
 }
