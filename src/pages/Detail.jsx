@@ -16,7 +16,6 @@ export default function Detail() {
         axios.get(`http://localhost:3000/movies/${id}`)
             .then((res) => {
                 setMovie(res.data)
-                console.log(movie.reviews)
 
             })
             .catch((err) => {
@@ -54,7 +53,7 @@ export default function Detail() {
                 <ReviewCard key={i} review={review} />
             )
             )}
-            <FormReview />
+            <FormReview ID={id} onReviewSubmitted={fetchData} />
 
 
         </div>
